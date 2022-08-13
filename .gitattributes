@@ -21,3 +21,7 @@
 
 # Other
 *.exe filter=lfs diff=lfs merge=lfs -text 
+
+#Binary files
+*.png binary
+*.jpg binary
