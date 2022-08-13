@@ -1,0 +1,20 @@
+$body-color : rgb(34, 42, 65);
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: $body-color;
+    #header 
+    {
+        margin: 15rem auto;
+        padding: 0;
+        text-align: center;
+        color : white;
+        font-family: sans-serif;
+    }
+}
