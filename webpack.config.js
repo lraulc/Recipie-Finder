@@ -33,6 +33,14 @@ module.exports = {
                 type: "aseet",
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
             },
+            // {
+            //     loader: "postcss-loader",
+            //     options: {
+            //         postcssOptions: {
+            //             plugins: () => [require("autoprefixer")],
+            //         },
+            //     },
+            // },
         ],
     },
     // New method for Webpack 5
