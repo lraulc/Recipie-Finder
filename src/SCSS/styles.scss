@@ -1,7 +1,143 @@
 @import "~bootstrap/scss/bootstrap";
 
+$font-color: rgb(67, 172, 217);
+$orange-color: rgb(227, 124, 21);
+$dark-blue: rgb(26, 53, 75);
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: $dark-blue;
+}
+
+#click-counter
+{
+    color: white;
+}
+
+
+.click-buttons-container
+{
+    gap: 3.2rem;
+}
+
 h1
 {
-    color: red;
+    color: $font-color;
     font-family: sans-serif;
 }
+
+.click-button
+{
+    width: 250px;
+}
+
+.first-section
+{
+    gap: 2.4rem;
+    margin-top: 9.4rem;
+    width: 1200px;
+    height: auto;
+}
+
+.btn-header
+{
+    font-size: 1.8rem;
+    color:rgb(227, 124, 21);
+    background-color: rgb(26, 53, 75);
+    border-color: $font-color;
+    &:hover
+    {
+        background-color: $orange-color;
+        color: white;
+    }
+    &:active
+    {
+        color: $orange-color;
+        background-color: $dark-blue ;
+    }
+    &:focus
+    {
+        color: $dark-blue;
+        background-color: $orange-color;
+    }
+}
+
+
+// add media queries for responsiveness
+@media (max-width: 768px)
+{
+    .first-section
+    {
+        width: 100%;
+    }
+    .btn-header
+    {
+        font-size: 1.2rem;
+    }
+    .main-title
+    {
+        font-size: 1.8rem;
+    }
+    .click-counter
+    {
+        font-size: 1.8rem;
+    }
+
+    .click-button
+    {
+        width: 200px;
+    }
+
+    .click-buttons-container
+    {
+        gap: .5rem;
+    }
+    .hero-icon
+    {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+// add media queries for medium screens
+@media (min-width: 768px) and (max-width: 1024px)
+{
+    .first-section
+    {
+        width: 100%;
+    }
+    .btn-header
+    {
+        font-size: 1.2rem;
+    }
+    .main-title
+    {
+        font-size: 1.8rem;
+    }
+    .click-counter
+    {
+        font-size: 1.8rem;
+    }
+    .click-button
+    {
+        width: 200px;
+    }
+    .click-buttons-container
+    {
+        gap: .5rem;
+    }
+    .hero-icon
+    {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
