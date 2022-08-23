@@ -1,8 +1,11 @@
-@import "~bootstrap/scss/bootstrap";
-
 $font-color: rgb(67, 172, 217);
-$orange-color: rgb(227, 124, 21);
-$dark-blue: rgb(26, 53, 75);
+$orange-color: #F6C57E;
+$dark-blue: #436084;
+$cream-color: #FEF9F2;
+$light-blue: #4465A6;
+$pink: #EC6A72;
+$tinto: #7E2D40;
+$light-green: #92DE96;
 
 *
 {
@@ -13,63 +16,137 @@ $dark-blue: rgb(26, 53, 75);
 
 body
 {
-    background-color: $dark-blue;
+    background-color: $cream-color;
 }
 
-#click-counter
-{
-    color: white;
-}
-
-
-.click-buttons-container
-{
-    gap: 3.2rem;
-}
-
-h1
-{
-    color: $font-color;
-    font-family: sans-serif;
-}
-
-.click-button
-{
-    width: 250px;
-}
-
-.first-section
-{
-    gap: 2.4rem;
-    margin-top: 9.4rem;
-    width: 1200px;
-    height: auto;
-}
-
-.btn-header
-{
-    font-size: 1.8rem;
-    color:rgb(227, 124, 21);
-    background-color: rgb(26, 53, 75);
-    border-color: $font-color;
-    &:hover
-    {
-        background-color: $orange-color;
-        color: white;
+.recipies{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    #results{
+        margin-top: 2rem;
+        font-weight: lighter;
+        color: $light-blue;
+        font-size: 1.2rem;
     }
-    &:active
-    {
-        color: $orange-color;
-        background-color: $dark-blue ;
+    #search{
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+        font-weight: lighter;
+        color: $light-blue;
+        font-size: 1.2rem;
     }
-    &:focus
-    {
-        color: $dark-blue;
-        background-color: $orange-color;
+    strong{
+        color: #000;
+        font-weight: lighter;
+    }
+    .recipieContainer{
+        display: grid;
+        grid-template-columns: repeat(3,.8fr);
+        gap: 2rem;
+        .recipie{
+            border: 3px solid $pink;
+            border-radius: 1rem;
+            background-color: #fff;
+            text-align: left;
+            box-shadow: 2px 5px 14px -5px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 2px 5px 14px -5px rgba(0,0,0,0.75);
+            -moz-box-shadow: 2px 5px 14px -5px rgba(0,0,0,0.75);
+            img{
+                border-radius: 1rem 1rem 0 0;
+                width: 100%;
+            }
+            h3{
+                color: $tinto;
+                text-align: left;
+                padding: .3rem 2rem;
+                font-weight: normal;
+                font-size: 1.4rem;
+            }
+            p{
+                padding: .3rem 2rem;
+                color: #808080;
+                margin-top: .2rem;
+                margin-bottom: 0;
+            }
+            .cat1{
+                background-color: $pink;
+                color: #fff;
+                border-radius: 1rem;
+                padding: .05rem 1rem;
+                margin: .3rem .5rem .3rem 2rem;
+                font-size: .8rem;
+            }
+            .cat2{
+                background-color: $dark-blue;
+                color: #fff;
+                border-radius: 1rem;
+                padding: .05rem 1rem;
+                font-size: .8rem;
+            }
+            .cat3{
+                background-color: $light-green;
+                color: #fff;
+                border-radius: 1rem;
+                padding: .05rem 1rem;
+                font-size: .8rem;
+            }
+            .cat4{
+                background-color: $orange-color;
+                color: #fff;
+                border-radius: 1rem;
+                padding: .05rem 1rem;
+                font-size: .8rem;
+            }
+            .contenedor{
+                margin-top: 0;
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+                left: 1rem;
+                top: 1rem;
+            }
+            .contenedorBoton{
+                display: flex;
+                justify-content: center;
+                width: 7%;
+                background: linear-gradient(0,$pink,$orange-color);
+                padding: .3rem 1.5rem;
+                border-radius: 50%;
+            }
+            a{
+                display: block;
+                color: #fff;
+                font-size: 2rem;
+                text-decoration: none;
+            }
+        }
     }
 }
-
-
+.contenedor{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+.contenedorBoton{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0,$orange-color,$pink);
+    padding: .5rem 1.2rem;
+    border-radius: 50%;
+}
+a{
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.backToTop{
+    display: block;
+    margin: .8rem auto 3rem auto;
+    color: $pink;
+    font-size: 1.2rem;
+}
 // add media queries for responsiveness
 @media (max-width: 768px)
 {
