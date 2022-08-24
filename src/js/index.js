@@ -1,5 +1,4 @@
 import "../SCSS/styles.scss";
-// import * as bootstrap from "bootstrap";
 
 const topBtn = document.getElementById("top-btn");
 const resetBtn = document.getElementById("reset-btn");

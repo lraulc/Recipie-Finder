@@ -5,7 +5,7 @@ $cream-color: #FFFBD5;
 $light-blue: #3A6186;
 $pink: #FF5F6D;
 $dark-red: #89253E;
-$light-green: #92DE96;
+$light-green: #78E08F;
 
 
 // Font family
@@ -32,11 +32,23 @@ $btn-weight: 200;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body
 {
     background-color: $cream-color;
+}
+
+// Reemplazar este boton por el de "search"
+.btn-recipies
+{
+    display: inline-block;
+    padding: 1rem 4rem;
+    border: 1px solid $dark-blue;
+    border-radius: 5px;
+    background-color: $dark-blue;
+    color: $cream-color;
 }
 
 .recipies{
