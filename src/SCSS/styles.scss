@@ -1,11 +1,31 @@
 $font-color: rgb(67, 172, 217);
-$orange-color: #F6C57E;
-$dark-blue: #436084;
-$cream-color: #FEF9F2;
-$light-blue: #4465A6;
-$pink: #EC6A72;
-$tinto: #7E2D40;
+$orange-color: #FFC371;
+$dark-blue: #111D28;
+$cream-color: #FFFBD5;
+$light-blue: #3A6186;
+$pink: #FF5F6D;
+$dark-red: #89253E;
 $light-green: #92DE96;
+
+
+// Font family
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
+
+// Font sizes
+$h1-font-size: 2.4rem;
+$h2-font-size: 1.8rem;
+$h3-font-size: 1.6rem;
+$parragraph-font-size: 1.4rem;
+$btn-font-size: 1.4rem;
+
+
+// Font weights
+$h1-weight: 700;
+$h2-weight: 400;
+$h3-weight: 400;
+$parragraph-weight: 300;
+$btn-weight: 200;
+
 
 *
 {
@@ -57,7 +77,7 @@ body
                 width: 100%;
             }
             h3{
-                color: $tinto;
+                color: $dark-red;
                 text-align: left;
                 padding: .3rem 2rem;
                 font-weight: normal;
