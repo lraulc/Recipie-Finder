@@ -39,12 +39,15 @@ $btn-weight: 200;
     font-family: 'Poppins', sans-serif;
 }
 
-body
-{
-    background-color: $cream-color;
-}
+/**********************************
+    1. Landing Page
+**********************************/
 
-// Reemplazar este boton por el de "search"
+.landing-page-body
+{
+    background-color: $dark-blue;
+    height: 100vh;
+}
 
 .search-icon
 {
@@ -59,6 +62,14 @@ body
     padding: 0.3rem 0.8rem;
 }
 
+/**********************************
+    FINAL DE LANDING PAGE
+**********************************/
+
+
+/**********************************
+    2. Recipies Page
+**********************************/
 .recipies{
     width: 70%;
     margin: auto;
