@@ -1,19 +1,17 @@
 // Font family
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap");
 
 // Import Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
 $font-color: rgb(67, 172, 217);
-$orange-color: #FFC371;
-$dark-blue: #111D28;
-$cream-color: #FFFBD5;
-$light-blue: #3A6186;
-$pink: #FF5F6D;
-$dark-red: #89253E;
-$light-green: #78E08F;
-
-
+$orange-color: #ffc371;
+$dark-blue: #111d28;
+$cream-color: #fffbd5;
+$light-blue: #3a6186;
+$pink: #ff5f6d;
+$dark-red: #89253e;
+$light-green: #78e08f;
 
 // Font sizes
 $h1-font-size: 2.4rem;
@@ -22,7 +20,6 @@ $h3-font-size: 1.6rem;
 $parragraph-font-size: 1.4rem;
 $btn-font-size: 1.4rem;
 
-
 // Font weights
 $h1-weight: 700;
 $h2-weight: 400;
@@ -30,32 +27,45 @@ $h3-weight: 400;
 $parragraph-weight: 300;
 $btn-weight: 200;
 
-
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 /**********************************
     1. Landing Page
 **********************************/
 
-.landing-page-body
-{
+.landing-page-body {
     background-color: $dark-blue;
     height: 100vh;
 }
 
-.search-icon
+.main-content {
+    gap: 0.5rem;
+    width: 35rem;
+}
+
+.search-bar-container
 {
+    width: 100%;
+    height: auto;
+}
+
+.search-bar {
+    background-color: $dark-blue;
+    border: 3px solid $orange-color;
+    border-radius: 75px;
+    width: 100%;
+}
+
+.search-icon {
     stroke: $orange-color;
 }
 
-.btn-recipies
-{
+.btn-recipies {
     background-color: $dark-blue;
     border: 3px solid $orange-color;
     border-radius: 50%;
@@ -66,90 +76,89 @@ $btn-weight: 200;
     FINAL DE LANDING PAGE
 **********************************/
 
-
 /**********************************
     2. Recipies Page
 **********************************/
-.recipies{
+.recipies {
     width: 70%;
     margin: auto;
     text-align: center;
-    #results{
+    #results {
         margin-top: 2rem;
         font-weight: lighter;
         color: $light-blue;
         font-size: 1.2rem;
     }
-    #search{
+    #search {
         margin-bottom: 3rem;
         margin-top: 1rem;
         font-weight: lighter;
         color: $light-blue;
         font-size: 1.2rem;
     }
-    strong{
+    strong {
         color: #000;
         font-weight: lighter;
     }
-    .recipieContainer{
+    .recipieContainer {
         display: grid;
-        grid-template-columns: repeat(3,.8fr);
+        grid-template-columns: repeat(3, 0.8fr);
         gap: 2rem;
-        .recipie{
+        .recipie {
             border: 3px solid $pink;
             border-radius: 1rem;
             background-color: #fff;
             text-align: left;
-            box-shadow: 2px 5px 14px -5px rgba(0,0,0,0.75);
-            -webkit-box-shadow: 2px 5px 14px -5px rgba(0,0,0,0.75);
-            -moz-box-shadow: 2px 5px 14px -5px rgba(0,0,0,0.75);
-            img{
+            box-shadow: 2px 5px 14px -5px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 2px 5px 14px -5px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 2px 5px 14px -5px rgba(0, 0, 0, 0.75);
+            img {
                 border-radius: 1rem 1rem 0 0;
                 width: 100%;
             }
-            h3{
+            h3 {
                 color: $dark-red;
                 text-align: left;
-                padding: .3rem 2rem;
+                padding: 0.3rem 2rem;
                 font-weight: normal;
                 font-size: 1.4rem;
             }
-            p{
-                padding: .3rem 2rem;
+            p {
+                padding: 0.3rem 2rem;
                 color: #808080;
-                margin-top: .2rem;
+                margin-top: 0.2rem;
                 margin-bottom: 0;
             }
-            .cat1{
+            .cat1 {
                 background-color: $pink;
                 color: #fff;
                 border-radius: 1rem;
-                padding: .05rem 1rem;
-                margin: .3rem .5rem .3rem 2rem;
-                font-size: .8rem;
+                padding: 0.05rem 1rem;
+                margin: 0.3rem 0.5rem 0.3rem 2rem;
+                font-size: 0.8rem;
             }
-            .cat2{
+            .cat2 {
                 background-color: $dark-blue;
                 color: #fff;
                 border-radius: 1rem;
-                padding: .05rem 1rem;
-                font-size: .8rem;
+                padding: 0.05rem 1rem;
+                font-size: 0.8rem;
             }
-            .cat3{
+            .cat3 {
                 background-color: $light-green;
                 color: #fff;
                 border-radius: 1rem;
-                padding: .05rem 1rem;
-                font-size: .8rem;
+                padding: 0.05rem 1rem;
+                font-size: 0.8rem;
             }
-            .cat4{
+            .cat4 {
                 background-color: $orange-color;
                 color: #fff;
                 border-radius: 1rem;
-                padding: .05rem 1rem;
-                font-size: .8rem;
+                padding: 0.05rem 1rem;
+                font-size: 0.8rem;
             }
-            .contenedor{
+            .contenedor {
                 margin-top: 0;
                 display: flex;
                 justify-content: flex-end;
@@ -157,15 +166,15 @@ $btn-weight: 200;
                 left: 1rem;
                 top: 1rem;
             }
-            .contenedorBoton{
+            .contenedorBoton {
                 display: flex;
                 justify-content: center;
                 width: 7%;
-                background: linear-gradient(0,$pink,$orange-color);
-                padding: .3rem 1.5rem;
+                background: linear-gradient(0, $pink, $orange-color);
+                padding: 0.3rem 1.5rem;
                 border-radius: 50%;
             }
-            a{
+            a {
                 display: block;
                 color: #fff;
                 font-size: 2rem;
@@ -174,98 +183,80 @@ $btn-weight: 200;
         }
     }
 }
-.contenedor{
+.contenedor {
     margin-top: 4rem;
     display: flex;
     justify-content: center;
 }
-.contenedorBoton{
+.contenedorBoton {
     display: flex;
     justify-content: center;
-    background: linear-gradient(0,$orange-color,$pink);
-    padding: .5rem 1.2rem;
+    background: linear-gradient(0, $orange-color, $pink);
+    padding: 0.5rem 1.2rem;
     border-radius: 50%;
 }
-a{
+a {
     display: block;
     color: #fff;
     font-size: 2rem;
     text-decoration: none;
 }
-.backToTop{
+.backToTop {
     display: block;
-    margin: .8rem auto 3rem auto;
+    margin: 0.8rem auto 3rem auto;
     color: $pink;
     font-size: 1.2rem;
 }
 // add media queries for responsiveness
-@media (max-width: 768px)
-{
-    .first-section
-    {
+@media (max-width: 768px) {
+    .first-section {
         width: 100%;
     }
-    .btn-header
-    {
+    .btn-header {
         font-size: 1.2rem;
     }
-    .main-title
-    {
+    .main-title {
         font-size: 1.8rem;
     }
-    .click-counter
-    {
+    .click-counter {
         font-size: 1.8rem;
     }
 
-    .click-button
-    {
+    .click-button {
         width: 200px;
     }
 
-    .click-buttons-container
-    {
-        gap: .5rem;
+    .click-buttons-container {
+        gap: 0.5rem;
     }
-    .hero-icon
-    {
+    .hero-icon {
         width: 100px;
         height: 100px;
     }
 }
 
 // add media queries for medium screens
-@media (min-width: 768px) and (max-width: 1024px)
-{
-    .first-section
-    {
+@media (min-width: 768px) and (max-width: 1024px) {
+    .first-section {
         width: 100%;
     }
-    .btn-header
-    {
+    .btn-header {
         font-size: 1.2rem;
     }
-    .main-title
-    {
+    .main-title {
         font-size: 1.8rem;
     }
-    .click-counter
-    {
+    .click-counter {
         font-size: 1.8rem;
     }
-    .click-button
-    {
+    .click-button {
         width: 200px;
     }
-    .click-buttons-container
-    {
-        gap: .5rem;
+    .click-buttons-container {
+        gap: 0.5rem;
     }
-    .hero-icon
-    {
+    .hero-icon {
         width: 100px;
         height: 100px;
     }
 }
-
-
