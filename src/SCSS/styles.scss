@@ -1,3 +1,9 @@
+// Font family
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
+
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
 $font-color: rgb(67, 172, 217);
 $orange-color: #FFC371;
 $dark-blue: #111D28;
@@ -8,8 +14,6 @@ $dark-red: #89253E;
 $light-green: #78E08F;
 
 
-// Font family
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
 
 // Font sizes
 $h1-font-size: 2.4rem;
@@ -41,14 +45,18 @@ body
 }
 
 // Reemplazar este boton por el de "search"
+
+.search-icon
+{
+    stroke: $orange-color;
+}
+
 .btn-recipies
 {
-    display: inline-block;
-    padding: 1rem 4rem;
-    border: 1px solid $dark-blue;
-    border-radius: 5px;
     background-color: $dark-blue;
-    color: $cream-color;
+    border: 3px solid $orange-color;
+    border-radius: 50%;
+    padding: 0.3rem 0.8rem;
 }
 
 .recipies{
