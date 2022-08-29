@@ -9,7 +9,9 @@ $orange-color: #ffc371;
 $dark-blue: #111d28;
 $cream-color: #fffbd5;
 $light-blue: #3a6186;
-$pink: #ff5f6d;
+$Pink: #ff5f6d;
+$Faded-Pink: #ff5f6ccc;
+$Faded-Orange: #ffc471cc;
 $dark-red: #89253e;
 $light-green: #78e08f;
 
@@ -39,8 +41,34 @@ $btn-weight: 200;
 **********************************/
 
 .landing-page-body {
-    background: linear-gradient(180deg, $pink, $orange-color);
+    background-image: linear-gradient(45deg, $Pink, $Faded-Orange);
+    background-size: 400% 400%;
     height: 100vh;
+    animation: gradient 15s ease infinite;
+    position: relative;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-image: url("../assets/Images/fondo3.jpg");
+        background-size: cover;
+        padding: 55rem;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .main-content {
@@ -48,8 +76,7 @@ $btn-weight: 200;
     width: 35rem;
 }
 
-.search-bar-container
-{
+.search-bar-container {
     width: 100%;
     height: auto;
 }
@@ -57,32 +84,30 @@ $btn-weight: 200;
 .search-bar {
     background-color: $dark-blue;
     border: 3px solid $orange-color;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 75px;
     width: 100%;
+    text-align: center;
     &:focus {
         border: none;
         background-color: $dark-blue;
         color: white;
     }
-}
-.btn-random
-{
-    background-color: $pink;
-    border: 2px solid $orange-color;
-    border-radius: 75px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    font-weight: $h1-weight;
-    font-size: $btn-font-size;
-    letter-spacing: 1px;
-    color: white;
-    width: 50%;
-    height: auto;
-    padding: 1.2rem 0;
-
+    &:hover {
+        &::placeholder {
+            color: $Pink;
+        }
+    }
+    &:active,
+    &:focus {
+        &::placeholder {
+            color: transparent;
+        }
+    }
 }
 
 .search-icon {
-    stroke: $orange-color;
+    stroke: white;
     transform: translateY(-2px);
 }
 
@@ -91,6 +116,40 @@ $btn-weight: 200;
     border: 3px solid $orange-color;
     border-radius: 50%;
     padding: 0.3rem 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+        background-color: $Pink;
+        border: 3px solid $orange-color;
+    }
+}
+
+.btn-random {
+    background-color: $Pink;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: 2px solid $orange-color;
+    border-radius: 75px;
+    font-weight: $h1-weight;
+    font-size: $btn-font-size;
+    letter-spacing: 1px;
+    color: white;
+    width: 50%;
+    height: auto;
+    padding: 1.2rem 0;
+    &:active,
+    &:link,
+    &:focus {
+        background-color: $Pink;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        border: 2px solid $orange-color;
+        color: white;
+    }
+    &:hover {
+        color: white;
+        background-color: $Pink;
+        border: solid 2px $cream-color;
+        box-shadow: 0 8px 2px rgba(0, 0, 0, 0.1);
+    }
 }
 
 /**********************************
@@ -126,7 +185,7 @@ $btn-weight: 200;
         grid-template-columns: repeat(3, 0.8fr);
         gap: 2rem;
         .recipie {
-            border: 3px solid $pink;
+            border: 3px solid $Pink;
             border-radius: 1rem;
             background-color: #fff;
             text-align: left;
@@ -151,7 +210,7 @@ $btn-weight: 200;
                 margin-bottom: 0;
             }
             .cat1 {
-                background-color: $pink;
+                background-color: $Pink;
                 color: #fff;
                 border-radius: 1rem;
                 padding: 0.05rem 1rem;
@@ -191,7 +250,7 @@ $btn-weight: 200;
                 display: flex;
                 justify-content: center;
                 width: 7%;
-                background: linear-gradient(0, $pink, $orange-color);
+                background: linear-gradient(0, $Pink, $orange-color);
                 padding: 0.3rem 1.5rem;
                 border-radius: 50%;
             }
@@ -212,7 +271,7 @@ $btn-weight: 200;
 .contenedorBoton {
     display: flex;
     justify-content: center;
-    background: linear-gradient(0, $orange-color, $pink);
+    background: linear-gradient(0, $orange-color, $Pink);
     padding: 0.5rem 1.2rem;
     border-radius: 50%;
 }
@@ -225,7 +284,7 @@ a {
 .backToTop {
     display: block;
     margin: 0.8rem auto 3rem auto;
-    color: $pink;
+    color: $Pink;
     font-size: 1.2rem;
 }
 // add media queries for responsiveness

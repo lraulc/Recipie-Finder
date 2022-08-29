@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="./Isotipo.png" />
+        <link rel="icon" href="../src/assets/Images/Isotipo.png" />
         <link rel="stylesheet" href="./SCSS/styles.scss" />
         <title>Recipie Finder - Find your favorite recipies</title>
     </head>
@@ -16,12 +16,12 @@
                 class="container d-flex flex-column justify-content-center align-items-center main-content"
             >
                 <img
-                    src="./Isotipo.png"
+                    src="../src/assets/Images/Isotipo.png"
                     alt="isotipo"
                     width="250px"
                     height="250px"
                 />
-                <img src="./Logotipo.png" alt="logotipo" />
+                <img src="../src/assets/Images/Logotipo.png" alt="logotipo" />
                 <div
                     class="input-group d-flex align-items-center justify-content-center mt-3"
                 >
@@ -30,9 +30,9 @@
                         role="search"
                     >
                         <input
-                            class="form-control me-2 search-bar"
+                            class="form-control search-bar"
                             type="search"
-                            placeholder="Search"
+                            placeholder="Type here to start searching!"
                             aria-label="Search"
                         />
                         <a
@@ -62,7 +62,7 @@
                 <button class="btn btn-random m-4">Random Recipie</button>
             </div>
         </div>
-
+        <script src="../node_modules/axios/dist/axios.min.js"></script>
         <script src="./js/index.js"></script>
     </body>
 </html>
