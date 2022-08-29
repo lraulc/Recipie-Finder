@@ -46,12 +46,13 @@ $btn-weight: 200;
     height: 100vh;
     animation: gradient 15s ease infinite;
     position: relative;
-    
+    overflow: hidden;
+
     &::after {
         content: "";
         position: absolute;
         z-index: -1;
-        background-image: url("../assets/Images/fondo3.jpg");
+        background-image: url("../assets/Images/fondo1.jpg");
         background-size: cover;
         padding: 55rem;
     }
@@ -76,6 +77,16 @@ $btn-weight: 200;
     width: 35rem;
 }
 
+.landing-logotipo {
+    width: 50%;
+    height: auto;
+}
+
+.landing-isotipo {
+    width: 25% !important;
+    width: auto;
+}
+
 .search-bar-container {
     width: 100%;
     height: auto;
@@ -88,6 +99,7 @@ $btn-weight: 200;
     border-radius: 75px;
     width: 100%;
     text-align: center;
+
     &:focus {
         border: none;
         background-color: $dark-blue;
@@ -289,54 +301,9 @@ a {
 }
 // add media queries for responsiveness
 @media (max-width: 768px) {
-    .first-section {
-        width: 100%;
-    }
-    .btn-header {
-        font-size: 1.2rem;
-    }
-    .main-title {
-        font-size: 1.8rem;
-    }
-    .click-counter {
-        font-size: 1.8rem;
-    }
-
-    .click-button {
-        width: 200px;
-    }
-
-    .click-buttons-container {
-        gap: 0.5rem;
-    }
-    .hero-icon {
-        width: 100px;
-        height: 100px;
-    }
+    
 }
 
 // add media queries for medium screens
 @media (min-width: 768px) and (max-width: 1024px) {
-    .first-section {
-        width: 100%;
-    }
-    .btn-header {
-        font-size: 1.2rem;
-    }
-    .main-title {
-        font-size: 1.8rem;
-    }
-    .click-counter {
-        font-size: 1.8rem;
-    }
-    .click-button {
-        width: 200px;
-    }
-    .click-buttons-container {
-        gap: 0.5rem;
-    }
-    .hero-icon {
-        width: 100px;
-        height: 100px;
-    }
 }
