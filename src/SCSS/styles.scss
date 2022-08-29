@@ -20,6 +20,7 @@ $h1-font-size: 2.4rem;
 $h2-font-size: 1.8rem;
 $h3-font-size: 1.6rem;
 $parragraph-font-size: 1.4rem;
+$footer-font-size: 0.8rem;
 $btn-font-size: 1.4rem;
 
 // Font weights
@@ -164,6 +165,30 @@ $btn-weight: 200;
     }
 }
 
+.landing-footer
+{
+    position:fixed;
+    bottom: 0;
+}
+
+.footer-text
+{
+    font-size: $footer-font-size;
+}
+
+.footer-column
+{
+    width: 20%;
+    gap: 1.4rem;
+}
+
+.bedu-logo
+{
+    width: 8%;
+    height: auto;
+}
+
+
 /**********************************
     FINAL DE LANDING PAGE
 **********************************/
@@ -301,7 +326,7 @@ a {
 }
 // add media queries for responsiveness
 @media (max-width: 768px) {
-    
+
 }
 
 // add media queries for medium screens
