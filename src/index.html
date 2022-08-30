@@ -7,6 +7,7 @@
         <link rel="icon" href="../src/assets/Images/Isotipo.png" />
         <link rel="stylesheet" href="./SCSS/styles.scss" />
         <title>Recipie Finder - Find your favorite recipies</title>
+        <script type="module" src="./js/bkn_index.js"></script>
     </head>
     <body>
         <div
@@ -33,6 +34,7 @@
                         role="search"
                     >
                         <input
+                            id="in_index"
                             class="form-control search-bar"
                             type="search"
                             placeholder="Type here to start searching!"
@@ -41,7 +43,9 @@
                         <a
                             class="btn-search"
                             href="./recipies.html"
+
                             type="submit"
+                            id="btn_search"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
