@@ -221,9 +221,16 @@ margin-top: 20px;
   margin-bottom: 0;
 }
 .similar-recipie .similar-recipie-content {
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
   text-align: justify;
+}
+.similar-recipie .similar-recipie-content span {
+  background-color: #EC6A72;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.05rem 1rem;
+  margin: 0.5rem 0 0 1.3rem;
+  font-size: 0.8rem;
 }
 @media (max-width: 768px) {
   .first-section {
