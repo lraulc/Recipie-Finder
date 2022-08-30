@@ -20,6 +20,7 @@ $h1-font-size: 2.4rem;
 $h2-font-size: 1.8rem;
 $h3-font-size: 1.6rem;
 $parragraph-font-size: 1.4rem;
+$footer-font-size: 0.8rem;
 $btn-font-size: 1.4rem;
 
 // Font weights
@@ -46,7 +47,8 @@ $btn-weight: 200;
     height: 100vh;
     animation: gradient 15s ease infinite;
     position: relative;
-    
+    overflow: hidden;
+
     &::after {
         content: "";
         position: absolute;
@@ -76,6 +78,16 @@ $btn-weight: 200;
     width: 35rem;
 }
 
+.landing-logotipo {
+    width: 50%;
+    height: auto;
+}
+
+.landing-isotipo {
+    width: 25% !important;
+    width: auto;
+}
+
 .search-bar-container {
     width: 100%;
     height: auto;
@@ -88,6 +100,7 @@ $btn-weight: 200;
     border-radius: 75px;
     width: 100%;
     text-align: center;
+
     &:focus {
         border: none;
         background-color: $dark-blue;
@@ -151,6 +164,30 @@ $btn-weight: 200;
         box-shadow: 0 8px 2px rgba(0, 0, 0, 0.1);
     }
 }
+
+.landing-footer
+{
+    position:fixed;
+    bottom: 0;
+}
+
+.footer-text
+{
+    font-size: $footer-font-size;
+}
+
+.footer-column
+{
+    width: 20%;
+    gap: 1.4rem;
+}
+
+.bedu-logo
+{
+    width: 8%;
+    height: auto;
+}
+
 
 /**********************************
     FINAL DE LANDING PAGE
@@ -289,54 +326,9 @@ a {
 }
 // add media queries for responsiveness
 @media (max-width: 768px) {
-    .first-section {
-        width: 100%;
-    }
-    .btn-header {
-        font-size: 1.2rem;
-    }
-    .main-title {
-        font-size: 1.8rem;
-    }
-    .click-counter {
-        font-size: 1.8rem;
-    }
 
-    .click-button {
-        width: 200px;
-    }
-
-    .click-buttons-container {
-        gap: 0.5rem;
-    }
-    .hero-icon {
-        width: 100px;
-        height: 100px;
-    }
 }
 
 // add media queries for medium screens
 @media (min-width: 768px) and (max-width: 1024px) {
-    .first-section {
-        width: 100%;
-    }
-    .btn-header {
-        font-size: 1.2rem;
-    }
-    .main-title {
-        font-size: 1.8rem;
-    }
-    .click-counter {
-        font-size: 1.8rem;
-    }
-    .click-button {
-        width: 200px;
-    }
-    .click-buttons-container {
-        gap: 0.5rem;
-    }
-    .hero-icon {
-        width: 100px;
-        height: 100px;
-    }
 }
