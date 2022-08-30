@@ -140,7 +140,33 @@ a {
   color: #EC6A72;
   font-size: 1.2rem;
 }
+/*Recipie detail styles*/
 
+.main-container{
+  display: flex;
+  width: 70%;
+  height: 100vh;
+  margin: 200px auto;
+  
+}
+
+.img-container{
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border: 3px solid #ff5f6d;
+  border-radius: 1rem;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+.similar-recipie-container{
+  display: grid;
+  grid-template-columns: repeat(3, 0.8fr);
+  gap: 2rem;
+}
 @media (max-width: 768px) {
   .first-section {
     width: 100%;
