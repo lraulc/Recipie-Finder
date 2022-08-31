@@ -17,6 +17,10 @@ module.exports = {
             filename: "recipies.html",
             template: "./src/recipies.html",
         }),
+        new HtmlWebpackPlugin({
+            filename: "recipie-detail.html",
+            template: "./src/recipie-detail.html",
+        })
     ],
     module: {
         rules: [
