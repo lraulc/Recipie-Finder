@@ -6,23 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="SCSS/styles.css">
     <link rel="stylesheet" href="./SCSS/styles.scss" />
-    <script defer src="./js/index.js"></script>
+    <script defer src="./js/recipie-detail.js"></script>
     <title>Recipie Detail</title>
 </head>
 <body>
     <hr> 
     <main class="main-container">
-       
     <aside class="left-aside">
         <div class="img-container">
-            <img src="https://picsum.photos/seed/picsum/300/200" alt="gyoza"/>
+            <img id="recipie-image"src="https://picsum.photos/seed/picsum/300/200" alt="gyoza"/>
         </div>
         <div class="categories-container">
             <h3>Categories</h3>
             <div class="categories-list">
-                <span>Home Made</span>
-                <span>Japanese</span>
-                <span>Sweat</span>
+                <span id="category"></span>
             </div>
         </div>
         <div class="similar-recipies-container">
