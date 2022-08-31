@@ -1,3 +1,4 @@
+//Esto sirve para ejecutar la petición cuando la pagina carga
 function init() {
     const mealID = location.search.substring(4);
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
@@ -10,6 +11,7 @@ function init() {
 }
 init()
 
+//Para renderizar el contenido de la peticion
 function addMealToDOM(meal) {
     const recipieImage = document.getElementById('recipie-image');
     const category = document.getElementById('category');

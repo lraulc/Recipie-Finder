@@ -7,10 +7,7 @@ fondos[2] = "../assets/Images/fondo3.jpg";
 fondos[3] = "../assets/Images/fondo4.jpg";
 
 //Declaro algunas variables
-
 const random = document.getElementById('random');
-const recipieEl = document.getElementById('recipies');
-const recipieTitle = document.getElementById('recipie-title')
 
 //Funcion para traer receta random
 function getRandomMeal() { 
