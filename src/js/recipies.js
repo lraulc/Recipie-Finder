@@ -9,6 +9,29 @@ console.log(completeUrl)
 let nameRecipie = []
 let UrlRecipieimg = []
 
+
+let idSearch = document.getElementById("search")
+let nodeSearch = document.createElement("strong")
+let textsearch = document.createTextNode(aux)
+nodeSearch.appendChild(textsearch)
+console.log(nodeSearch)
+idSearch.removeChild(idSearch.lastChild)
+idSearch.appendChild(nodeSearch)
+console.log(idSearch)
+
+// Test
+
+function ChangeContainer(data){
+  for (let i = 0; i < 7 ; i++) {
+    let containerRecipie = document.getElementById("idcontainer")
+    
+  }
+}
+
+
+
+
+
 getdata(completeUrl)
   .then(data => {
     console.log(data.meals)
@@ -59,8 +82,7 @@ function objToArray(arrayData){
   ;
 }
 
-let containerRecipie =  document.getElementById('idcontainer')
-console.log(containerRecipie)
+
 
 
 
