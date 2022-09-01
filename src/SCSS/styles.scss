@@ -42,21 +42,14 @@ $btn-weight: 200;
 **********************************/
 
 .landing-page-body {
-    background-image: linear-gradient(45deg, $Pink, $Faded-Orange);
+    background-image: linear-gradient(45deg, $Pink, $orange-color);
     background-size: 400% 400%;
     height: 100vh;
     animation: gradient 15s ease infinite;
-    position: relative;
+    position: fixed;
     overflow: hidden;
-
-    &::after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        background-image: url("../assets/Images/fondo1.jpg");
-        background-size: cover;
-        padding: 55rem;
-    }
+    margin: 0 auto !important;
+    padding: 0 !important;
 }
 
 @keyframes gradient {
@@ -74,8 +67,11 @@ $btn-weight: 200;
 }
 
 .main-content {
+    height: 100vh;
     gap: 0.5rem;
     width: 35rem;
+    margin: 0 auto !important;
+    padding: 0 !important;
 }
 
 .landing-logotipo {
@@ -121,14 +117,13 @@ $btn-weight: 200;
 
 .search-icon {
     stroke: white;
-    transform: translateY(-2px);
 }
 
 .btn-search {
     background-color: $dark-blue;
     border: 3px solid $orange-color;
-    border-radius: 50%;
-    padding: 0.3rem 0.8rem;
+    border-radius: 100%;
+    padding: 0.8rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 
     &:hover {
@@ -165,29 +160,33 @@ $btn-weight: 200;
     }
 }
 
-.landing-footer
-{
-    position:fixed;
-    bottom: 0;
+.landing-footer {
+    width: 75%;
+    position: fixed;
+    bottom: 2rem;
 }
 
-.footer-text
-{
+.footer-text {
     font-size: $footer-font-size;
 }
 
-.footer-column
-{
+.footer-column {
     width: 20%;
     gap: 1.4rem;
 }
 
-.bedu-logo
-{
+.footer-column-right {
+    width: 20%;
+}
+
+.footer-column-right-text {
+    margin: 0;
+}
+
+.bedu-logo {
     width: 8%;
     height: auto;
 }
-
 
 /**********************************
     FINAL DE LANDING PAGE
@@ -324,113 +323,282 @@ a {
     color: $Pink;
     font-size: 1.2rem;
 }
-// add media queries for responsiveness
-@media (max-width: 768px) {
+
+/**********************************
+    FINAL DE RECIPIES PAGE
+**********************************/
+
+
+// MEDIA QUERIES PARA TELEFONOS
+@media (min-width: 250px) and (max-width: 768px) {
+    
+    /**********************************
+        MEDIA QUERIES - TELEFONO - LANDING PAGE
+    **********************************/
+    .landing-isotipo
+    {
+        width: 25% !important;
+        height: auto;
+    }
+    .landing-logotipo
+    {
+        width: 35%;
+        height: auto;
+    }
+    .landing-page-body
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+    }
+    .main-content
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .search-bar-container
+    {
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .search-icon
+    {
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-search
+    {
+        width: 4.4rem;
+        height: 4.4rem;
+    }
+
+    .btn-random
+    {
+        font-size: 0.8rem;
+        padding: 1rem;
+        width: 45%;
+    }
+
+    .footer
+    {
+        // flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.4rem;    
+    }
+
+    .footer-text
+    {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    
+    .bedu-logo
+    {
+        width: 2.4rem;
+        height: auto;
+    }
+
+    .footer-left
+    {
+        // flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // visibility: hidden;
+    }
+
+    .footer-column-right
+    {
+        flex-direction: row;
+    }
+
+    /**********************************
+    FINAL DE MEDIA QUERIES - TELEFONO - LANDING PAGE
+    **********************************/
+
+    //AGREGAR MEDIA QUERIES DE RECIPIES Y BUSCADOR
+
+
+
+}
+
+// MEDIA QUERIES PARA TABLETAS - IPAD PRO
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px)
+{
+    /**********************************
+        MEDIA QUERIES - TABLETA - LANDING PAGE
+    **********************************/
+    .landing-isotipo
+    {
+        width: 15% !important;
+        height: auto;
+    }
+    .landing-logotipo
+    {
+        width: 25%;
+        height: auto;
+    }
+    .landing-page-body
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .main-content
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .search-bar-container
+    {
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .search-icon
+    {
+        justify-content: center;
+        align-items: center;
+    }
+    .search-bar
+    {
+        width: 50%;
+    }
+    .btn-search
+    {
+        padding: 1.2rem;    
+        margin: 0;
+    }
+
+    .btn-random
+    {
+        width: 25%;
+        padding: 0.4rem 0;
+        font-size: 1.2rem;
+    }
+
+    .footer-text
+    {
+        font-size: 0.5rem;
+    }
+
+    /**********************************
+    FINAL DE MEDIA QUERIES - TABLETA - LANDING PAGE
+    **********************************/
+
+    //AGREGAR MEDIA QUERIES DE RECIPIES Y BUSCADOR
+
 
 }
 
 // add media queries for medium screens
 @media (min-width: 768px) and (max-width: 1024px) {
 }
+
 /* Styles for recipie-detail-page */
-.main-container{
-  display: flex;
-  width: 70%;
-  height: 100vh;
-  margin: 50px auto;
-  
+.main-container {
+    display: flex;
+    width: 70%;
+    height: 100vh;
+    margin: 50px auto;
 }
 .categories-container {
-  display: block;
-  margin-top: 30px;
+    display: block;
+    margin-top: 30px;
 }
 .categories-list {
-display: flex;
-justify-content: space-evenly;
-margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
 }
 .categories-container h3 {
-  display: block;
-  text-align: center;
-  font-weight: lighter;
-  color: $orange-color;
+    display: block;
+    text-align: center;
+    font-weight: lighter;
+    color: $orange-color;
 }
 .categories-container .categories-list .category {
-  background-color: $dark-red;
-  max-width: 150px;
-  color: #fff;
-  border-radius: 2rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+    background-color: $dark-red;
+    max-width: 150px;
+    color: #fff;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
 }
 .categories-container .categories-list .area {
     background-color: $light-green;
-  max-width: 150px;
-  color: #fff;
-  border-radius: 2rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+    max-width: 150px;
+    color: #fff;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
 }
 
-.img-container{
-  width: 500px;
-  height: 500px;
-  object-fit: cover;
-  border: 3px solid $Pink;
-  border-radius: 1rem;
+.img-container {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border: 3px solid $Pink;
+    border-radius: 1rem;
 }
 .img-container img {
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
 }
-.similar-recipies-container{
-  display: flex;
-  width: 500px;
-  flex-direction: column;
-  gap: 2rem;
+.similar-recipies-container {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    gap: 2rem;
 }
 .similar-recipies-container h1 {
-  text-align: center;
-  margin-top: 20px;
-  color: $light-blue;
-  font-weight: lighter;
+    text-align: center;
+    margin-top: 20px;
+    color: $light-blue;
+    font-weight: lighter;
 }
 .similar-recipie {
-  border: 3px solid $Pink;
-  border-radius: 1rem;
-  background-color: #fff;
-  text-align: right;
-  display: flex;
+    border: 3px solid $Pink;
+    border-radius: 1rem;
+    background-color: #fff;
+    text-align: right;
+    display: flex;
 }
 .similar-recipie h3 {
-  color: $dark-red;
-  text-align: center;
-  padding: 0.3rem 2rem;
-  font-weight: normal;
-  font-size: 1.4rem;
+    color: $dark-red;
+    text-align: center;
+    padding: 0.3rem 2rem;
+    font-weight: normal;
+    font-size: 1.4rem;
 }
 .similar-recipie img {
-  border-radius: 15px 0 0 15px;
-  width: 50%;
+    border-radius: 15px 0 0 15px;
+    width: 50%;
 }
 .similar-recipie .similar-recipie-content p {
-  padding: 0.3rem 2rem;
-  color: $light-blue;
-  margin-top: 0.2rem;
-  margin-bottom: 0;
+    padding: 0.3rem 2rem;
+    color: $light-blue;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
 }
 .similar-recipie .similar-recipie-content {
-  display: inline-block;
-  text-align: justify;
+    display: inline-block;
+    text-align: justify;
 }
-.similar-recipie .similar-recipie-content span .category{
-  background-color: $Pink;
-  color: #fff;
-  border-radius: 1rem;
-  padding: 0.05rem 1rem;
-  margin: 0.5rem 0 0 1.3rem;
-  font-size: 0.8rem;
+.similar-recipie .similar-recipie-content span .category {
+    background-color: $Pink;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0.05rem 1rem;
+    margin: 0.5rem 0 0 1.3rem;
+    font-size: 0.8rem;
 }
 .right-aside {
     width: 500px;
@@ -440,9 +608,9 @@ margin-top: 20px;
 .single-recipie-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
 }
-.single-recipie-container h1{
+.single-recipie-container h1 {
     color: $Pink;
     text-align: left;
     font-weight: 400;
@@ -458,7 +626,7 @@ margin-top: 20px;
     list-style: none;
     padding: 0 10px 0 0;
 }
-.recipie-instructions{
+.recipie-instructions {
     padding: 0 20px 0 10px;
     color: $light-blue;
     font-weight: lighter;
