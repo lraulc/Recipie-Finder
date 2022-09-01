@@ -50,15 +50,6 @@ $btn-weight: 200;
     overflow: hidden;
     margin: 0 auto !important;
     padding: 0 !important;
-
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     z-index: -1;
-    //     background-image: url("../assets/Images/fondo1.jpg");
-    //     background-size: cover;
-    //     padding: 55rem;
-    // }
 }
 
 @keyframes gradient {
@@ -126,7 +117,6 @@ $btn-weight: 200;
 
 .search-icon {
     stroke: white;
-    // transform: translateY(-2px);
 }
 
 .btn-search {
@@ -334,9 +324,17 @@ a {
     font-size: 1.2rem;
 }
 
+/**********************************
+    FINAL DE RECIPIES PAGE
+**********************************/
+
 
 // MEDIA QUERIES PARA TELEFONOS
-@media (min-width: 412px) and (max-width: 768px) {
+@media (min-width: 250px) and (max-width: 768px) {
+    
+    /**********************************
+        MEDIA QUERIES - TELEFONO - LANDING PAGE
+    **********************************/
     .landing-isotipo
     {
         width: 25% !important;
@@ -353,6 +351,7 @@ a {
         height: 100%;
         margin: 0;
         padding: 0;
+        overflow: auto;
     }
     .main-content
     {
@@ -376,11 +375,63 @@ a {
         width: 4.4rem;
         height: 4.4rem;
     }
+
+    .btn-random
+    {
+        font-size: 0.8rem;
+        padding: 1rem;
+        width: 45%;
+    }
+
+    .footer
+    {
+        // flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.4rem;    
+    }
+
+    .footer-text
+    {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    
+    .bedu-logo
+    {
+        width: 2.4rem;
+        height: auto;
+    }
+
+    .footer-left
+    {
+        // flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // visibility: hidden;
+    }
+
+    .footer-column-right
+    {
+        flex-direction: row;
+    }
+
+    /**********************************
+    FINAL DE MEDIA QUERIES - TELEFONO - LANDING PAGE
+    **********************************/
+
+    //AGREGAR MEDIA QUERIES DE RECIPIES Y BUSCADOR
+
+
+
 }
 
 // MEDIA QUERIES PARA TABLETAS - IPAD PRO
 @media only screen and (min-device-width: 834px) and (max-device-width: 834px)
 {
+    /**********************************
+        MEDIA QUERIES - TABLETA - LANDING PAGE
+    **********************************/
     .landing-isotipo
     {
         width: 15% !important;
@@ -421,7 +472,6 @@ a {
     }
     .btn-search
     {
-        // background-color: transparent;
         padding: 1.2rem;    
         margin: 0;
     }
@@ -437,16 +487,18 @@ a {
     {
         font-size: 0.5rem;
     }
+
+    /**********************************
+    FINAL DE MEDIA QUERIES - TABLETA - LANDING PAGE
+    **********************************/
+
+    //AGREGAR MEDIA QUERIES DE RECIPIES Y BUSCADOR
+
+
 }
 
 // add media queries for medium screens
 @media (min-width: 768px) and (max-width: 1024px) {
-}
-/*
-Media Queries para Landing
-*/
-.main-content {
-    transform: translateY(-4rem);
 }
 
 /* Styles for recipie-detail-page */
