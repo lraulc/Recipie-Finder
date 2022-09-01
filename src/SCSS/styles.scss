@@ -20,6 +20,7 @@ $h1-font-size: 2.4rem;
 $h2-font-size: 1.8rem;
 $h3-font-size: 1.6rem;
 $parragraph-font-size: 1.4rem;
+$footer-font-size: 0.8rem;
 $btn-font-size: 1.4rem;
 
 // Font weights
@@ -46,7 +47,8 @@ $btn-weight: 200;
     height: 100vh;
     animation: gradient 15s ease infinite;
     position: relative;
-    
+    overflow: hidden;
+
     &::after {
         content: "";
         position: absolute;
@@ -76,6 +78,16 @@ $btn-weight: 200;
     width: 35rem;
 }
 
+.landing-logotipo {
+    width: 50%;
+    height: auto;
+}
+
+.landing-isotipo {
+    width: 25% !important;
+    width: auto;
+}
+
 .search-bar-container {
     width: 100%;
     height: auto;
@@ -88,6 +100,7 @@ $btn-weight: 200;
     border-radius: 75px;
     width: 100%;
     text-align: center;
+
     &:focus {
         border: none;
         background-color: $dark-blue;
@@ -151,6 +164,30 @@ $btn-weight: 200;
         box-shadow: 0 8px 2px rgba(0, 0, 0, 0.1);
     }
 }
+
+.landing-footer
+{
+    position:fixed;
+    bottom: 0;
+}
+
+.footer-text
+{
+    font-size: $footer-font-size;
+}
+
+.footer-column
+{
+    width: 20%;
+    gap: 1.4rem;
+}
+
+.bedu-logo
+{
+    width: 8%;
+    height: auto;
+}
+
 
 /**********************************
     FINAL DE LANDING PAGE
@@ -289,54 +326,141 @@ a {
 }
 // add media queries for responsiveness
 @media (max-width: 768px) {
-    .first-section {
-        width: 100%;
-    }
-    .btn-header {
-        font-size: 1.2rem;
-    }
-    .main-title {
-        font-size: 1.8rem;
-    }
-    .click-counter {
-        font-size: 1.8rem;
-    }
 
-    .click-button {
-        width: 200px;
-    }
-
-    .click-buttons-container {
-        gap: 0.5rem;
-    }
-    .hero-icon {
-        width: 100px;
-        height: 100px;
-    }
 }
 
 // add media queries for medium screens
 @media (min-width: 768px) and (max-width: 1024px) {
-    .first-section {
-        width: 100%;
-    }
-    .btn-header {
-        font-size: 1.2rem;
-    }
-    .main-title {
-        font-size: 1.8rem;
-    }
-    .click-counter {
-        font-size: 1.8rem;
-    }
-    .click-button {
-        width: 200px;
-    }
-    .click-buttons-container {
-        gap: 0.5rem;
-    }
-    .hero-icon {
-        width: 100px;
-        height: 100px;
-    }
+}
+/* Styles for recipie-detail-page */
+.main-container{
+  display: flex;
+  width: 70%;
+  height: 100vh;
+  margin: 50px auto;
+  
+}
+.categories-container {
+  display: block;
+  margin-top: 30px;
+}
+.categories-list {
+display: flex;
+justify-content: space-evenly;
+margin-top: 20px;
+}
+.categories-container h3 {
+  display: block;
+  text-align: center;
+  font-weight: lighter;
+  color: $orange-color;
+}
+.categories-container .categories-list .category {
+  background-color: $dark-red;
+  max-width: 150px;
+  color: #fff;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+.categories-container .categories-list .area {
+    background-color: $light-green;
+  max-width: 150px;
+  color: #fff;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.img-container{
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border: 3px solid $Pink;
+  border-radius: 1rem;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+.similar-recipies-container{
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  gap: 2rem;
+}
+.similar-recipies-container h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: $light-blue;
+  font-weight: lighter;
+}
+.similar-recipie {
+  border: 3px solid $Pink;
+  border-radius: 1rem;
+  background-color: #fff;
+  text-align: right;
+  display: flex;
+}
+.similar-recipie h3 {
+  color: $dark-red;
+  text-align: center;
+  padding: 0.3rem 2rem;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+.similar-recipie img {
+  border-radius: 15px 0 0 15px;
+  width: 50%;
+}
+.similar-recipie .similar-recipie-content p {
+  padding: 0.3rem 2rem;
+  color: $light-blue;
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+}
+.similar-recipie .similar-recipie-content {
+  display: inline-block;
+  text-align: justify;
+}
+.similar-recipie .similar-recipie-content span .category{
+  background-color: $Pink;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.05rem 1rem;
+  margin: 0.5rem 0 0 1.3rem;
+  font-size: 0.8rem;
+}
+.right-aside {
+    width: 500px;
+    height: 500px;
+    padding: 0 20px 0 30px;
+}
+.single-recipie-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.single-recipie-container h1{
+    color: $Pink;
+    text-align: left;
+    font-weight: 400;
+    padding: 0 10px 0 0;
+}
+.single-recipie-info h4 {
+    color: $Pink;
+    font-weight: lighter;
+    padding: 0 20px 0 10px;
+}
+.single-recipie-info ul li {
+    color: $light-blue;
+    list-style: none;
+    padding: 0 10px 0 0;
+}
+.recipie-instructions{
+    padding: 0 20px 0 10px;
+    color: $light-blue;
+    font-weight: lighter;
+    text-align: justify;
 }
