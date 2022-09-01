@@ -1,11 +1,16 @@
 import "../SCSS/styles.scss";
 import "./recipie-detail";
 
-let fondos = new Array();
-fondos[0] = "../assets/Images/fondo1.jpg";
-fondos[1] = "../assets/Images/fondo2.jpg";
-fondos[2] = "../assets/Images/fondo3.jpg";
-fondos[3] = "../assets/Images/fondo4.jpg";
+//Funcion para esconder footer cuando detecta teclado en el celular
+const footer = document.querySelector("footer");
+
+window.addEventListener("resize", (e) => {
+    if (window.innerHeight > 720) {
+        footer.style.visibility = "visible";
+    } else {
+        footer.style.visibility = "hidden";
+    }
+});
 
 //Declaro algunas variables
 const random = document.getElementById("random");

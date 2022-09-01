@@ -161,7 +161,7 @@ $btn-weight: 200;
 }
 
 .landing-footer {
-    width: 75%;
+    width: 65%;
     position: fixed;
     bottom: 2rem;
 }
@@ -175,8 +175,19 @@ $btn-weight: 200;
     gap: 1.4rem;
 }
 
+.footer-left
+{
+    flex-basis: auto;
+}
+
+.footer-center
+{
+    flex-grow: 0;
+}
+
 .footer-column-right {
     width: 20%;
+    flex-grow: 0;
 }
 
 .footer-column-right-text {
@@ -500,6 +511,37 @@ a {
 // add media queries for medium screens
 @media (min-width: 768px) and (max-width: 1024px) {
 }
+
+.bedu-logo
+{
+    width: 4.2rem;
+    height: auto;
+}
+
+.landing-footer
+{
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2.4rem;
+    width: 95%;
+}
+
+.footer-left
+{
+    flex-grow: 1;
+}
+
+.footer-center
+{
+    flex-grow: 2;
+}
+
+.footer-right
+{
+    flex-grow: 1;
+}
+
+
 
 /* Styles for recipie-detail-page */
 .main-container {
