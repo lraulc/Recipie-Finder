@@ -1,3 +1,4 @@
+import "./recipies";
 let btnSearch = document.getElementById("btn_search")
 
 let wordSearch = 'test'
@@ -14,10 +15,10 @@ btnSearch.addEventListener("click",function(event){
     
 })
 
-// btnSearch.addEventListener("click",function(event){
+btnSearch.addEventListener("click",function(event){
     
-//     localStorage.setItem("key1",wordSearch)
+    localStorage.setItem("key1",wordSearch)
     
     
     
-// })
+})
