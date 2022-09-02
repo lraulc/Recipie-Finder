@@ -1,6 +1,7 @@
 import "../SCSS/styles.scss";
-import "./recipie-detail.js";
-import "./recipies.js";
+// import "./recipie-detail.js";
+// import "./recipies.js";
+// import "./index01.js"
 
 
 
@@ -23,7 +24,7 @@ fondos[3] = "../assets/Images/fondo4.jpg"
 
 //Declaro algunas variables
 const random = document.getElementById("random");
-const searchBtn = document.getElementById("search-btn");
+//const searchBtn = document.getElementById("search-btn");
 
 // //Funcion para buscar receta
 // function searchRecipie() {
@@ -57,19 +58,4 @@ random
   //Agregamos Event Listeners
 //   random.addEventListener('click', getRand
  
-let btnSearch = document.getElementById("btn_search")
 
-let wordSearch = 'test'
-btnSearch.addEventListener("click",function(event){
-    wordSearch = document.getElementById("in_index").value
-   
-    if (wordSearch.length>1){
-        window.location.href=`./recipies.html?id=${wordSearch}`
-        
-    }else{
-        btnSearch.href=""
-        
-        
-    }
-    
-})
