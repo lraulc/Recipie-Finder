@@ -19,12 +19,12 @@
 // let aux = localStorage.getItem("key1")
 // console.log(aux)
 
-const mealID = location.search.substring(4);
+const mealIDRecipie = location.search.substring(4);
 
 
 
 //========
-let aux = mealID
+let aux = mealIDRecipie
 
 //======= variables para url
 let url_ingre = "https://www.themealdb.com/api/json/v1/1/filter.php?i="
