@@ -24,13 +24,6 @@ fondos[3] = "../assets/Images/fondo4.jpg"
 
 //Declaro algunas variables
 const random = document.getElementById("random");
-//const searchBtn = document.getElementById("search-btn");
-
-// //Funcion para buscar receta
-// function searchRecipie() {
-//     const inputSearch = document.getElementById("search-input");
-//     window.location.href = `/recipies.html?s=${inputSearch.value}`;
-// }
 
 //Funcion para traer receta random
 function getRandomMeal() {

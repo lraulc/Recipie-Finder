@@ -1,23 +1,4 @@
-// <<<<<<< HEAD
-// //Ubicamos los params de búsqueda de la API
-// const urlParams = new URLSearchParams(window.location.search);
-// const myParam = urlParams.get('s');
 
-// //Funcion para obtener las recetas con ingrediente principal
-// function getRecepies() {
-//     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${myParam}`)
-//     .then(res => res.json())
-//     .then(data => {
-//         const meal = data.meals;
-//         console.log(meal) 
-//     })
-
-// }
-// getRecepies()
-// =======
-
-// let aux = localStorage.getItem("key1")
-// console.log(aux)
 
 const mealID = location.search.substring(4);
 
@@ -95,11 +76,8 @@ getdata(completeUrl)
         let nwChilds = IdContainerMain.parentNode.lastChild.childNodes
 
         for (let g = 0; g < nwChilds.length; g++) {
-
           ModifCard(nwChilds[g], h)
-
         }
-
       }
     }
     for (let j = 0; j < (Btn_contenedor.length - 1); j++) {
@@ -109,9 +87,7 @@ getdata(completeUrl)
           ChildBtn[g].href = "/recipie-detail.html?id=" + idRecipe[j]
           //console.log(ChildBtn[g].href)
         }
-
       }
-
     }
 
     for (let k = 0; k < idRecipe.length; k++) {
@@ -136,18 +112,8 @@ getdata(completeUrl)
       }).catch(error => {
         console.log('error')
       })
-      
-      
-
     }
-
-
   });
-    
-    
-    
-
-  
 
 // funcion principal
 
@@ -158,11 +124,6 @@ function managedata(data) {
 
     return "error"
   }
-
-
-
-  //console.log(nameRecipie)
-  //console.log(UrlRecipieimg)
 }
 
 //// === funciones 
@@ -174,13 +135,10 @@ async function getdata(completeUrl) {
         if (response.status == 404) {
           return ('error')
         } else {
-          //console.log('===')
-
           return response.json();
         }
       })
       .then(function (data) {
-        //console.log('obt data')
         return data;
       })
   }
@@ -198,7 +156,6 @@ function objToArray(arrayData) {
       if (typeof (element.strCategory) == "string") { RecipieCategory.push(element.strCategory) }
      
       if (typeof (element.strArea) == "string") { RecipieArea.push(element.strArea) }
-      //if (typeof (element.strInstructions) == "string") { recipieInsts.push(element.strInstructions.slice(0,20)) }
     })
   } else {
     console.log('Error')
@@ -217,12 +174,8 @@ function ModifCard(childnode, j) {
   if (childnode.className == "javaScript") {
     childnode.appendChild(document.createTextNode(nameRecipie[j]))
     childnode.removeChild(childnode.firstChild)
-
   }
   if (childnode.src != null) {
     childnode.src = UrlRecipieimg[j]
-
   };
-
-
 }
