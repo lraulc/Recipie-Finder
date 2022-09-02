@@ -125,6 +125,7 @@ $btn-weight: 200;
     border-radius: 100%;
     padding: 0.8rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    font-size: medium;
 
     &:hover {
         background-color: $Pink;
@@ -363,6 +364,10 @@ a {
     .btn-search {
         width: 4.4rem;
         height: 4.4rem;
+        font-size: medium;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
     }
 
     .btn-random {
@@ -481,6 +486,7 @@ a {
     .btn-search {
         padding: 1.2rem;
         margin: 0;
+        font-size: medium;
     }
 
     .btn-random {

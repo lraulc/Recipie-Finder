@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
@@ -15,7 +16,7 @@
   background-size: 400% 400%;
   height: 100vh;
   -webkit-animation: gradient 15s ease infinite;
-          animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
   position: relative;
 }
 
@@ -32,9 +33,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -44,9 +47,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -66,7 +71,7 @@
   background-color: #111d28;
   border: 3px solid #ffc371;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 75px;
   width: 100%;
   text-align: center;
@@ -94,26 +99,30 @@
   color: #ff5f6d;
 }
 
-.search-bar:active::-webkit-input-placeholder, .search-bar:focus::-webkit-input-placeholder {
+.search-bar:active::-webkit-input-placeholder,
+.search-bar:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.search-bar:active:-ms-input-placeholder, .search-bar:focus:-ms-input-placeholder {
+.search-bar:active:-ms-input-placeholder,
+.search-bar:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.search-bar:active::-ms-input-placeholder, .search-bar:focus::-ms-input-placeholder {
+.search-bar:active::-ms-input-placeholder,
+.search-bar:focus::-ms-input-placeholder {
   color: transparent;
 }
 
-.search-bar:active::placeholder, .search-bar:focus::placeholder {
+.search-bar:active::placeholder,
+.search-bar:focus::placeholder {
   color: transparent;
 }
 
 .search-icon {
   stroke: white;
   -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .btn-search {
@@ -122,7 +131,7 @@
   border-radius: 50%;
   padding: 0.3rem 0.8rem;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 .btn-search:hover {
@@ -133,7 +142,7 @@
 .btn-random {
   background-color: #ff5f6d;
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border: 2px solid #ffc371;
   border-radius: 75px;
   font-weight: 700;
@@ -145,10 +154,12 @@
   padding: 1.2rem 0;
 }
 
-.btn-random:active, .btn-random:link, .btn-random:focus {
+.btn-random:active,
+.btn-random:link,
+.btn-random:focus {
   background-color: #ff5f6d;
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border: 2px solid #ffc371;
   color: white;
 }
@@ -158,7 +169,7 @@
   background-color: #ff5f6d;
   border: solid 2px #fffbd5;
   -webkit-box-shadow: 0 8px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 8px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 2px rgba(0, 0, 0, 0.1);
 }
 
 /**********************************
@@ -197,7 +208,7 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (0.8fr)[3];
-      grid-template-columns: repeat(3, 0.8fr);
+  grid-template-columns: repeat(3, 0.8fr);
   gap: 2rem;
 }
 
@@ -270,8 +281,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   position: relative;
   left: 1rem;
   top: 1rem;
@@ -282,8 +293,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 7%;
   background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(#ff5f6d), to(#ffc371));
   background: linear-gradient(0, #ff5f6d, #ffc371);
@@ -304,8 +315,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .contenedorBoton {
@@ -313,8 +324,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(#ffc371), to(#ff5f6d));
   background: linear-gradient(0, #ffc371, #ff5f6d);
   padding: 0.5rem 1.2rem;
@@ -339,21 +350,27 @@ a {
   .first-section {
     width: 100%;
   }
+
   .btn-header {
     font-size: 1.2rem;
   }
+
   .main-title {
     font-size: 1.8rem;
   }
+
   .click-counter {
     font-size: 1.8rem;
   }
+
   .click-button {
     width: 200px;
   }
+
   .click-buttons-container {
     gap: 0.5rem;
   }
+
   .hero-icon {
     width: 100px;
     height: 100px;
@@ -364,21 +381,27 @@ a {
   .first-section {
     width: 100%;
   }
+
   .btn-header {
     font-size: 1.2rem;
   }
+
   .main-title {
     font-size: 1.8rem;
   }
+
   .click-counter {
     font-size: 1.8rem;
   }
+
   .click-button {
     width: 200px;
   }
+
   .click-buttons-container {
     gap: 0.5rem;
   }
+
   .hero-icon {
     width: 100px;
     height: 100px;
@@ -404,7 +427,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
@@ -427,7 +450,7 @@ a {
   width: 500px;
   height: 500px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 3px solid #ff5f6d;
   border-radius: 1rem;
 }
@@ -445,8 +468,8 @@ a {
   width: 500px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 2rem;
 }
 
@@ -500,4 +523,5 @@ a {
   margin: 0.5rem 0 0 1.3rem;
   font-size: 0.8rem;
 }
+
 /*# sourceMappingURL=styles.css.map */
