@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap");
 
 // Import Bootstrap
-@import "~bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
 
 $font-color: rgb(67, 172, 217);
 $orange-color: #ffc371;
@@ -295,15 +295,16 @@ $btn-weight: 200;
             .contenedorBoton {
                 display: flex;
                 justify-content: center;
-                width: 7%;
                 background: linear-gradient(0, $Pink, $orange-color);
+                width: 50px;
+                height: 50px;
                 padding: 0.3rem 1.5rem;
                 border-radius: 50%;
             }
             a {
                 display: block;
                 color: #fff;
-                font-size: 2rem;
+                font-size: 1.7rem;
                 text-decoration: none;
             }
         }
@@ -318,13 +319,15 @@ $btn-weight: 200;
     display: flex;
     justify-content: center;
     background: linear-gradient(0, $orange-color, $Pink);
+    width: 50px;
+    height: 50px;
     padding: 0.5rem 1.2rem;
     border-radius: 50%;
 }
 a {
     display: block;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-decoration: none;
 }
 .backToTop {
