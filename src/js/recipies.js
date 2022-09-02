@@ -39,14 +39,14 @@ let RecipieCategory = []
 let RecipieArea = []
 let recipieInsts = []
 
-let idSearch = document.getElementById("search")
-idSearch.removeChild(idSearch.lastChild)
-idSearch.appendChild(CreateNode("strong", aux))
+
 
 
 getdata(completeUrl)
   .then(data => {
-
+    let idSearch = document.getElementById("search")
+    idSearch.removeChild(idSearch.lastChild)
+    idSearch.appendChild(CreateNode("strong", aux))
     let resp = managedata(data)  /// Revisa que el resultado tenga al menos un valor como respuesta
     // Vairables DOM
     let IdContainerMain = document.getElementById("idcontainer1")
