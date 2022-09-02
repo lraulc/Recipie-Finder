@@ -558,9 +558,10 @@ a {
 /* Styles for recipie-detail-page */
 .main-container {
     display: flex;
-    width: 70%;
+    flex-wrap: wrap;
+    width: 80%;
     height: 100vh;
-    margin: 50px auto;
+    margin: 40px auto;
 }
 .categories-container {
     display: block;
@@ -685,6 +686,7 @@ a {
     padding: 0 10px 0 0;
 }
 .recipie-instructions {
+    min-width: 400px;
     padding: 0 20px 0 10px;
     color: $light-blue;
     font-weight: lighter;
