@@ -1,7 +1,7 @@
 import "../SCSS/styles.scss";
-// import "./recipie-detail.js";
-// import "./recipies.js";
-// import "./index01.js"
+import "./recipie-detail.js";
+import "./recipies.js";
+import "./index01.js"
 
 
 
