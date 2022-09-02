@@ -42,20 +42,6 @@ function getRandomMeal() {
         });
 }
 //Agregamos Event Listeners
-random
-    .addEventListener("click", getRandomMeal)
-    .then((res) => res.json())
-    .then((data) => {
-        const meal = data.meals[0];
-        window.location.href = `/recipie-detail.html?id=${meal.idMeal}`;
-// <<<<<<< HEAD
-//     });
-// //Agregamos Event Listeners
-// random.addEventListener("click", getRandomMeal);
-// searchBtn.addEventListener("click", searchRecipie);
-// =======
-      });
-  //Agregamos Event Listeners
-//   random.addEventListener('click', getRand
- 
-
+if(random) {
+random.addEventListener("click", getRandomMeal)
+}

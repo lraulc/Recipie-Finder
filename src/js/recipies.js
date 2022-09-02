@@ -152,7 +152,6 @@ getdata(completeUrl)
 // funcion principal
 
 function managedata(data) {
-  console.log(data.meals)
   if (data.meals != null) {
     return objToArray(data.meals)
   } else {
@@ -212,8 +211,6 @@ function CreateNode(element, text) {
   let node = document.createElement(element)
   let textnode = document.createTextNode(text)
   return node.appendChild(textnode)
-
-
 }
 
 function ModifCard(childnode, j) {
