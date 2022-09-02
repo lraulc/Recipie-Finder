@@ -586,9 +586,9 @@ a {
 .main-container {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: fit-content;
     height: 100vh;
-    margin: 40px auto;
+    margin: 20px auto;
 }
 .categories-container {
     display: block;
@@ -623,8 +623,8 @@ a {
 }
 
 .img-container {
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
     object-fit: cover;
     border: 3px solid $Pink;
     border-radius: 1rem;
@@ -646,45 +646,10 @@ a {
     color: $light-blue;
     font-weight: lighter;
 }
-.similar-recipie {
-    border: 3px solid $Pink;
-    border-radius: 1rem;
-    background-color: #fff;
-    text-align: right;
-    display: flex;
-}
-.similar-recipie h3 {
-    color: $dark-red;
-    text-align: center;
-    padding: 0.3rem 2rem;
-    font-weight: normal;
-    font-size: 1.4rem;
-}
-.similar-recipie img {
-    border-radius: 15px 0 0 15px;
-    width: 50%;
-}
-.similar-recipie .similar-recipie-content p {
-    padding: 0.3rem 2rem;
-    color: $light-blue;
-    margin-top: 0.2rem;
-    margin-bottom: 0;
-}
-.similar-recipie .similar-recipie-content {
-    display: inline-block;
-    text-align: justify;
-}
-.similar-recipie .similar-recipie-content span .category {
-    background-color: $Pink;
-    color: #fff;
-    border-radius: 1rem;
-    padding: 0.05rem 1rem;
-    margin: 0.5rem 0 0 1.3rem;
-    font-size: 0.8rem;
-}
+//El aside derecho
 .right-aside {
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
     padding: 0 20px 0 30px;
     flex-basis: 0;
     flex-grow: 999;
@@ -708,12 +673,15 @@ a {
     padding: 10px 20px 0 10px;
 }
 .single-recipie-info ul li {
+    max-width: 500px;
+    max-height: 100px;
     color: $light-blue;
     list-style: none;
     padding: 0 10px 0 0;
 }
 .recipie-instructions {
     min-width: 400px;
+    max-height: 500px;
     padding: 0 20px 0 10px;
     color: $light-blue;
     font-weight: lighter;
