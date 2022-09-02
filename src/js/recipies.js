@@ -3,12 +3,16 @@ console.log(aux)
 
 //======= variables para url
 let url_ingre = "https://www.themealdb.com/api/json/v1/1/filter.php?i="
+let UrlDetails = "https://www.themealdb.com/api/json/v1/1/lookup.php?i="
 let completeUrl = url_ingre + aux
 console.log(completeUrl)
 // === variables para manipular el resultado
 let nameRecipie = []
 let UrlRecipieimg = []
 let idRecipe = []
+let RecipieCategory = []
+let RecipieArea = []
+let recipieInsts = []
 
 let idSearch = document.getElementById("search")
 idSearch.removeChild(idSearch.lastChild)
@@ -19,23 +23,37 @@ getdata(completeUrl)
   .then(data => {
 
     let resp = managedata(data)  /// Revisa que el resultado tenga al menos un valor como respuesta
+    // Vairables DOM
     let IdContainerMain = document.getElementById("idcontainer1")
     let childesContainer = IdContainerMain.childNodes
     let Btn_contenedor = document.getElementsByClassName('contenedorBoton')
-    
     let IdNumRecipie = document.getElementById("results")
+    let numResults = "0"
+    let cat1 = document.getElementsByClassName("cat1")
+    let cat2 = document.getElementsByClassName("cat2")
+    let parrafo = document.getElementsByClassName("parrafo")
+
+    // convierte el numero de recetas
+    if (resp != "error") {
+      numResults = nameRecipie.length.toString() + " recipies"
+    }
+    else {
+      numResults = numResults + " recipies"
+    }
+    IdNumRecipie.removeChild(IdNumRecipie.lastChild)
+    IdNumRecipie.appendChild(CreateNode("strong", numResults))
 
 
+    // Accion si la respuesta es un error
     if (resp == "error") {
+      console.log("testing...")
       IdContainerMain.style.display = "none"
       IdContainerMain.parentNode.appendChild(CreateNode('h1', 'Elemento no encontrado'))
+
       return
     }
-    // coloca el numero de recetas encontradas
-    let numResults = nameRecipie.length.toString() + " recipies"
-    
-    IdNumRecipie.removeChild(IdNumRecipie.lastChild)
-    IdNumRecipie.appendChild(CreateNode("strong",numResults))
+
+    console.log("testing...1")
 
     for (let i = 0; i < childesContainer.length; i++) {
 
@@ -59,22 +77,47 @@ getdata(completeUrl)
     for (let j = 0; j < (Btn_contenedor.length - 1); j++) {
       let ChildBtn = Btn_contenedor[j].childNodes
       for (let g = 0; g < ChildBtn.length; g++) {
-        if(ChildBtn[g].href=!undefined){
-          ChildBtn[g].href = "/recipie-detail.html?id="+idRecipe[j]
-          console.log(ChildBtn[g].href)
+        if (ChildBtn[g].href = !undefined) {
+          ChildBtn[g].href = "/recipie-detail.html?id=" + idRecipe[j]
+          //console.log(ChildBtn[g].href)
         }
-        
+
       }
-      
+
     }
+
+    for (let k = 0; k < idRecipe.length; k++) {
       
+      let UrlDetailComplete = UrlDetails + idRecipe[k]
+      
+      getdata(UrlDetailComplete)
+        .then(detailsData => {
+          let propArea = detailsData.meals[0].strArea
+          let propCat = detailsData.meals[0].strCategory
+          let propSumary = detailsData.meals[0].strInstructions
+          let cutsumary = propSumary.slice(0,250) + "..."
+          console.log(cutsumary)      
+          cat1[k].removeChild(cat1[k].lastChild)
+          cat1[k].appendChild(document.createTextNode(propArea)) 
+           
+          cat2[k].removeChild(cat2[k].lastChild)
+          cat2[k].appendChild(document.createTextNode(propCat))
+
+          parrafo[k].removeChild(parrafo[k].lastChild)
+          parrafo[k].appendChild(document.createTextNode(cutsumary))
+      })
+      
+      
+
+    }
+
+
+  });
     
     
+    
 
-  }
-
-
-  )
+  
 
 // funcion principal
 
@@ -102,13 +145,13 @@ async function getdata(completeUrl) {
         if (response.status == 404) {
           return ('error')
         } else {
-          console.log('===')
+          //console.log('===')
 
           return response.json();
         }
       })
       .then(function (data) {
-        console.log('obt data')
+        //console.log('obt data')
         return data;
       })
   }
@@ -120,9 +163,13 @@ async function getdata(completeUrl) {
 function objToArray(arrayData) {
   if (arrayData.length != 0) {
     arrayData.forEach(element => {
-      nameRecipie.push(element.strMeal)
-      UrlRecipieimg.push(element.strMealThumb)
-      idRecipe.push(element.idMeal)
+      if (typeof (element.strMeal) == "string") { nameRecipie.push(element.strMeal) }
+      if (typeof (element.strMealThumb) == "string") { UrlRecipieimg.push(element.strMealThumb) }
+      if (typeof (element.idMeal) == "string") { idRecipe.push(element.idMeal) }
+      if (typeof (element.strCategory) == "string") { RecipieCategory.push(element.strCategory) }
+     
+      if (typeof (element.strArea) == "string") { RecipieArea.push(element.strArea) }
+      //if (typeof (element.strInstructions) == "string") { recipieInsts.push(element.strInstructions.slice(0,20)) }
     })
   } else {
     console.log('Error')
@@ -147,7 +194,7 @@ function ModifCard(childnode, j) {
   }
   if (childnode.src != null) {
     childnode.src = UrlRecipieimg[j]
-    
+
   };
 
 
