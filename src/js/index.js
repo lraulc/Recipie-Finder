@@ -1,5 +1,8 @@
 import "../SCSS/styles.scss";
 import "./recipie-detail";
+import "./recipies";
+import "./index01"
+
 
 
 //Funcion para esconder footer cuando detecta teclado en el celular
@@ -21,7 +24,7 @@ fondos[3] = "../assets/Images/fondo4.jpg"
 
 //Declaro algunas variables
 const random = document.getElementById("random");
-const searchBtn = document.getElementById("search-btn");
+//const searchBtn = document.getElementById("search-btn");
 
 // //Funcion para buscar receta
 // function searchRecipie() {
@@ -53,5 +56,6 @@ random
 // =======
       });
   //Agregamos Event Listeners
-//   random.addEventListener('click', getRandomMeal);
+//   random.addEventListener('click', getRand
  
+
