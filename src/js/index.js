@@ -1,6 +1,6 @@
 import "../SCSS/styles.scss";
-import "./recipie-detail";
-import "./recipies";
+import "./recipie-detail.js";
+import "./recipies.js";
 
 
 
