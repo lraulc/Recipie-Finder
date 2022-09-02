@@ -1,7 +1,5 @@
 import "../SCSS/styles.scss";
-import "./recipie-detail.js";
-import "./recipies.js";
-import "./index01.js"
+
 
 
 
@@ -58,4 +56,6 @@ random
   //Agregamos Event Listeners
 //   random.addEventListener('click', getRand
  
-
+import "./recipie-detail.js";
+import "./recipies.js";
+import "./index01.js"
