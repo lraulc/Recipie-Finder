@@ -13,24 +13,18 @@ window.addEventListener("resize", (e) => {
 });
 
 //Declaro algunas variables
-<<<<<<< HEAD
 const random = document.getElementById("random");
-=======
-const random = document.getElementById('random');
-const searchBtn = document.getElementById('search-btn')
-
+const searchBtn = document.getElementById("search-btn");
 
 //Funcion para buscar receta
 function searchRecipie() {
-  const inputSearch = document.getElementById('search-input')
-  window.location.href = `/recipies.html?s=${inputSearch.value}`;
+    const inputSearch = document.getElementById("search-input");
+    window.location.href = `/recipies.html?s=${inputSearch.value}`;
 }
->>>>>>> silvi
 
 //Funcion para traer receta random
 function getRandomMeal() {
     fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
-<<<<<<< HEAD
         .then((res) => res.json())
         .then((data) => {
             const meal = data.meals[0];
@@ -38,16 +32,13 @@ function getRandomMeal() {
         });
 }
 //Agregamos Event Listeners
-random.addEventListener("click", getRandomMeal);
-=======
-      .then(res => res.json())
-      .then(data => {
+random
+    .addEventListener("click", getRandomMeal)
+    .then((res) => res.json())
+    .then((data) => {
         const meal = data.meals[0];
         window.location.href = `/recipie-detail.html?id=${meal.idMeal}`;
-      });
-  }
-  //Agregamos Event Listeners
-  random.addEventListener('click', getRandomMeal);
-  searchBtn.addEventListener('click', searchRecipie);
- 
->>>>>>> silvi
+    });
+//Agregamos Event Listeners
+random.addEventListener("click", getRandomMeal);
+searchBtn.addEventListener("click", searchRecipie);
