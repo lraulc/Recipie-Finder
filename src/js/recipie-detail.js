@@ -9,7 +9,9 @@ function init() {
       const meal = data.meals[0];
 
       addMealToDOM(meal);
-    });
+    }).catch(error => {
+      console.log('error')
+    })
 }
 init()
 

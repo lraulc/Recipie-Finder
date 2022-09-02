@@ -634,18 +634,6 @@ a {
     height: 100%;
     border-radius: 1rem;
 }
-.similar-recipies-container {
-    display: flex;
-    width: 500px;
-    flex-direction: column;
-    gap: 2rem;
-}
-.similar-recipies-container h1 {
-    text-align: center;
-    margin-top: 20px;
-    color: $light-blue;
-    font-weight: lighter;
-}
 //El aside derecho
 .right-aside {
     max-width: 500px;

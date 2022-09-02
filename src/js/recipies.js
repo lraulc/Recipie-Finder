@@ -133,6 +133,8 @@ getdata(completeUrl)
 
           parrafo[k].removeChild(parrafo[k].lastChild)
           parrafo[k].appendChild(document.createTextNode(cutsumary))
+      }).catch(error => {
+        console.log('error')
       })
       
       
