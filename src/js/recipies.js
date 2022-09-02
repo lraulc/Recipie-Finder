@@ -59,14 +59,17 @@ getdata(completeUrl)
     let parrafo = document.getElementsByClassName("parrafo")
 
     // convierte el numero de recetas
-    if (resp != "error") {
+    if (resp != ("error" || null)) {
       numResults = nameRecipie.length.toString() + " recipies"
+      IdNumRecipie.removeChild(IdNumRecipie.lastChild)
+      IdNumRecipie.appendChild(CreateNode("strong", numResults))
     }
     else {
       numResults = numResults + " recipies"
-    }
-    IdNumRecipie.removeChild(IdNumRecipie.lastChild)
+      IdNumRecipie.removeChild(IdNumRecipie.lastChild)
     IdNumRecipie.appendChild(CreateNode("strong", numResults))
+    }
+    
 
 
     // Accion si la respuesta es un error
