@@ -165,7 +165,7 @@ function managedata(data) {
 }
 
 //// === funciones 
-async function getdata(completeUrl) {
+function getdata(completeUrl) {
   try {
 
     return fetch(completeUrl)
