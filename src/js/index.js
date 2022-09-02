@@ -1,5 +1,6 @@
 import "../SCSS/styles.scss";
 import "./recipie-detail";
+import "./recipies";
 
 
 //Funcion para esconder footer cuando detecta teclado en el celular

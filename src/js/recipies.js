@@ -16,9 +16,10 @@
 // getRecepies()
 // =======
 
+// let aux = localStorage.getItem("key1")
+// console.log(aux)
+
 const mealID = location.search.substring(4);
-
-
 
 
 //========
