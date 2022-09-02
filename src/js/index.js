@@ -1,6 +1,7 @@
 import "../SCSS/styles.scss";
-//import "./recipie-detail";
-//import "./recipies";
+import "./recipie-detail";
+import "./recipies";
+
 
 
 //Funcion para esconder footer cuando detecta teclado en el celular
@@ -54,5 +55,21 @@ random
 // =======
       });
   //Agregamos Event Listeners
-//   random.addEventListener('click', getRandomMeal);
+//   random.addEventListener('click', getRand
  
+let btnSearch = document.getElementById("btn_search")
+
+let wordSearch = 'test'
+btnSearch.addEventListener("click",function(event){
+    wordSearch = document.getElementById("in_index").value
+   
+    if (wordSearch.length>1){
+        window.location.href=`./recipies.html?id=${wordSearch}`
+        
+    }else{
+        btnSearch.href=""
+        
+        
+    }
+    
+})
