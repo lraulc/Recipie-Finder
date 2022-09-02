@@ -405,6 +405,17 @@ a {
   /**********************************
   FINAL DE MEDIA QUERIES - TELEFONO - LANDING PAGE
   **********************************/
+  /**********************************
+  MEDIA QUERIES - TELEFONO - RECIPIES PAGE
+  **********************************/
+  .recipies {
+    width: 80%;
+  }
+  .recipies .recipieContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
 }
 @media only screen and (min-device-width: 834px) and (max-device-width: 834px) {
   /**********************************
@@ -458,7 +469,7 @@ a {
   FINAL DE MEDIA QUERIES - TABLETA - LANDING PAGE
   **********************************/
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   .bedu-logo {
     width: 4.2rem;
     height: auto;
@@ -499,6 +510,17 @@ a {
   .hero-icon {
     width: 100px;
     height: 100px;
+  }
+  /**********************************
+  MEDIA QUERIES - TABLETA - RECIPIES PAGE
+  **********************************/
+  .recipies {
+    width: 80%;
+  }
+  .recipies .recipieContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 0.8fr);
+    gap: 2rem;
   }
 }
 /* Styles for recipie-detail-page */

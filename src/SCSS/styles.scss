@@ -441,6 +441,19 @@ a {
     **********************************/
 
     //AGREGAR MEDIA QUERIES DE RECIPIES Y BUSCADOR
+
+    /**********************************
+    MEDIA QUERIES - TELEFONO - RECIPIES PAGE
+    **********************************/
+
+    .recipies {
+        width: 80%;
+        .recipieContainer {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem;
+        }
+    }
 }
 
 // MEDIA QUERIES PARA TABLETAS - IPAD PRO
@@ -510,7 +523,7 @@ a {
 }
 
 // add media queries for medium screens
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1200px) {
     .bedu-logo {
         width: 4.2rem;
         height: auto;
@@ -555,6 +568,17 @@ a {
     .hero-icon {
         width: 100px;
         height: 100px;
+    }
+    /**********************************
+    MEDIA QUERIES - TABLETA - RECIPIES PAGE
+    **********************************/
+    .recipies {
+        width: 80%;
+        .recipieContainer {
+            display: grid;
+            grid-template-columns: repeat(2, .8fr);
+            gap: 2rem;
+        }
     }
 }
 
