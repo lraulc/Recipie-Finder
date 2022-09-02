@@ -1,11 +1,11 @@
 
 
-const mealID = location.search.substring(4);
+const mealIDRecipie = location.search.substring(4);
 
 
 
 //========
-let aux = mealID
+let aux = mealIDRecipie
 
 //======= variables para url
 let url_ingre = "https://www.themealdb.com/api/json/v1/1/filter.php?i="
@@ -127,7 +127,7 @@ function managedata(data) {
 }
 
 //// === funciones 
-async function getdata(completeUrl) {
+function getdata(completeUrl) {
   try {
 
     return fetch(completeUrl)
