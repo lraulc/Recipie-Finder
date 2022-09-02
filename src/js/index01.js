@@ -1,4 +1,3 @@
-import "./recipies";
 let btnSearch = document.getElementById("btn_search")
 
 let wordSearch = 'test'
