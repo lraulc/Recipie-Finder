@@ -1,4 +1,5 @@
 
+
 //Esto sirve para ejecutar la petición cuando la pagina carga
 function init() {
     const mealID = location.search.substring(4);
@@ -8,7 +9,9 @@ function init() {
       const meal = data.meals[0];
 
       addMealToDOM(meal);
-    });
+    }).catch(error => {
+      console.log('error')
+    })
 }
 init()
 
@@ -46,3 +49,4 @@ function addMealToDOM(meal) {
     recipieInstructions.innerText = meal.strInstructions;
 
 }
+

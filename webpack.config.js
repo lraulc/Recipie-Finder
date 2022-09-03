@@ -1,7 +1,7 @@
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+// con
 module.exports = {
     entry: "./src/js/index.js",
     output: {
@@ -25,7 +25,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.m?js$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
@@ -55,5 +55,5 @@ module.exports = {
         },
         compress: true,
         port: 9000,
-    },
+    },// Testing
 };

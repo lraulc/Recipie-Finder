@@ -6,7 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="../src/assets/Images/Isotipo.png" />
         <link rel="stylesheet" href="./SCSS/styles.scss" />
+        <script defer src="./js/index.js"></script>
+        <script defer src="./js/index01.js"></script>     
+        
         <title>Recipie Finder - Find your favorite recipies</title>
+        
     </head>
     <body>
         <div
@@ -33,6 +37,8 @@
                         role="search"
                     >
                         <input
+
+                            id="in_index"
                             class="form-control search-bar"
                             type="search"
                             placeholder="Type here to start searching!"
@@ -40,8 +46,11 @@
                         />
                         <a
                             class="btn-search"
-                            href="./recipies.html"
+                            class="btn-search d-flex align-items-center justify-content-center"
+                           
+
                             type="submit"
+                            id="btn_search"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +59,7 @@
                                 stroke-width="1.5"
                                 stroke="currentColor"
                                 class="search-icon w-6 h-6"
-                                width=" 33px"
+                                width="33px"
                                 height="33px"
                             >
                                 <path
@@ -62,13 +71,15 @@
                         </a>
                     </form>
                 </div>
-                <button id="random" class="btn btn-random m-4">Random Recipie</button>
+                <button id="random" class="btn btn-random m-4">
+                    Random Recipie
+                </button>
             </div>
             <footer
-                class="container-fluid d-flex justify-content-between align-items-center landing-footer p-4"
+                class="footer d-flex justify-content-between align-items-center mt-auto py-3 landing-footer"
             >
                 <div
-                    class="footer-column d-flex m-0 pb-5 justify-content-center align-items-center"
+                    class="footer-column d-flex m-0 justify-content-center align-items-center footer-left"
                 >
                     <img
                         src="../src/assets/Images/BeduLogo.png"
@@ -81,28 +92,33 @@
                     </p>
                 </div>
                 <div
-                    class="footer-column d-flex m-0 pb-5 justify-content-center align-items-center"
+                    class="footer-column d-flex m-0 justify-content-center align-items-center footer-center"
                 >
-                    <p class="footer-text text-left m-0 p-0">
+                    <p class="footer-text text-center m-0 p-0">
                         Todos los derechos reservados &copy; | 2022
                     </p>
                 </div>
                 <div
-                    class="footer-column d-flex m-0 pb-5 justify-content-center align-items-center"
+                    class="footer-column-right d-flex flex-column m-0 justify-content-center align-items-end footer-right"
                 >
-                    <img
-                        src="../src/assets/Images/BeduLogo.png"
-                        alt="bedu-logo"
-                        class="bedu-logo m-0 p-0"
-                    />
-                    <p class="footer-text text-left m-0 p-0">
-                        Programa Web Development con Javascript
-                        <strong>Fase 2 - Recipie Finder</strong>
+                    <p class="footer-column-right-text footer-text">
+                        <strong>Integrantes:</strong>
+                    </p>
+                    <p class="footer-column-right-text footer-text">
+                        Luis Raúl Castillo
+                    </p>
+                    <p class="footer-column-right-text footer-text">
+                        Silvi Rodriguez
+                    </p>
+                    <p class="footer-column-right-text footer-text">
+                        Juan Salazar
+                    </p>
+                    <p class="footer-column-right-text footer-text">
+                        Ángel Lara
                     </p>
                 </div>
             </footer>
         </div>
-        <script src="../node_modules/axios/dist/axios.min.js"></script>
-        <script src="./js/index.js"></script>
+        
     </body>
 </html>
