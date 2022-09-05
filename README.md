@@ -35,8 +35,9 @@ Juan Salazar
   npm i webpack webpack-cli --save-dev
   
   ```
-* Ejectar npm run start
+* Ejectar 
+```bash
+npm run start
+```
 
 
-### Pruebas
-Al realizar pruebas, encontramos los siguientes [errores y fallas](https://docs.google.com/document/d/1BluqZTJqn6xx_xgC0U2XO4YVG42IndioVXXqpqF5YPY/edit?usp=sharing) que debemos corregir.
